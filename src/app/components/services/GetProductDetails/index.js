@@ -29,6 +29,19 @@ const getAllProductList = async (slug) => {
         return null;
     }
 };
+const getAllProducts = async () => {
+    try {
+        let result = await api.get(Apis.getAllproduct);
+        if (result.data.error) {
+            NotificationManager.error(result.data.error);
+            return null;
+        }
+        return result.data;
+    } catch (error) {
+        console.log(error);
+        return null;
+    }
+};
 
 const getProductByFilter = async (txt) => {
     try {
@@ -73,6 +86,7 @@ const getProductBySubcategory = async (data) => {
 };
 
 export default {
+    getAllProducts,
     getProductById,
     getAllProductList,
     getProductByFilter,

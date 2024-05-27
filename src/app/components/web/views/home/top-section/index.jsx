@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import GroceryStampleDetails from "../../../../services/GroceryStampleDetails";
+import services from "../../../../services/GetProductDetails";
 import { addToCart } from "../../../../../store/actions/cartActions";
 import CircularProgress from "@material-ui/core/CircularProgress";
 class Topsavers extends Component {
@@ -14,9 +14,9 @@ class Topsavers extends Component {
     };
   }
   async componentDidMount() {
-    let list = await GroceryStampleDetails.getAllGroceryStaple();
+    let list = await services.getAllProducts();
     if (list) {
-      this.setState({ productlist: list.data, isloaded: true });
+      this.setState({ productlist: list.product, isloaded: true });
     }
   }
   render() {
@@ -63,6 +63,7 @@ class Topsavers extends Component {
         },
       ],
     };
+    console.log("==>", this.state.productlist);
     return (
       <div>
         {/* New Item slider */}
@@ -88,8 +89,9 @@ class Topsavers extends Component {
                   <CircularProgress color="secondary" />
                 </div>
               ) : (
-                list.map((row, index) => (
+                this.state?.productlist?.map((row, index) => (
                   <div key={index} className="item">
+                    asds
                     <div className="product">
                       <Link
                         to={{
@@ -104,6 +106,9 @@ class Topsavers extends Component {
                           <img
                             className="img-fluid"
                             src={"http://localhost:4000/uploads/" + row.photo}
+                            onError={(e) => {
+                              e.target.src = "img/not-found.jpg";
+                            }}
                             alt="product"
                           />
                           {/* <span className="veg text-success mdi mdi-circle" /> */}

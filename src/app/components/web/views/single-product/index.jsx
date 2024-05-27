@@ -74,7 +74,10 @@ class Singleproduct extends Component {
                                 <div key={index}>
                                   <img
                                     alt
-                                    src={r.imgUrl}
+                                    src={r?.imgUrl}
+                                    onError={(e) => {
+                                      e.target.src = "img/not-found.jpg";
+                                    }}
                                     className="img-fluid img-center"
                                   />
                                 </div>

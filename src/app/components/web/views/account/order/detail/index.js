@@ -45,7 +45,7 @@ export default class Details extends Component {
         </div>
         <div className="dashboard-group">
           <div className="container">
-            <div className="row">
+            {/* <div className="row">
               <div className="col-lg-12">
                 <div className="user-dt">
                   <div className="user-img">
@@ -59,10 +59,9 @@ export default class Details extends Component {
                   </div>
                   <h4>{user.firstName}</h4>
                   <p>+977 {user.phone}</p>
-                  {/* <div className="earn-points"><img src="images/Dollar.svg" alt />Points : <span>20</span></div> */}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className>
@@ -83,18 +82,18 @@ export default class Details extends Component {
                       <i className="uil uil-box" />
                       My Orders
                     </a>
-                    <a href="/account/rewards" className="user-item">
+                    {/* <a href="/account/rewards" className="user-item">
                       <i className="uil uil-gift" />
                       My Rewards
                     </a>
                     <a href="/account/wishlist" className="user-item">
                       <i className="uil uil-heart" />
                       Shopping Wishlist
-                    </a>
-                    <a href="/account/address" className="user-item">
+                    </a> */}
+                    {/* <a href="/account/address" className="user-item">
                       <i className="uil uil-location-point" />
                       My Address
-                    </a>
+                    </a> */}
                     <a className="user-item" onClick={this.handleLogout}>
                       <i className="uil uil-exit" />
                       Logout

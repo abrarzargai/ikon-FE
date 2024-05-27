@@ -26,22 +26,23 @@ export default class Wishlist extends Component {
                 </div>
                 <div className="dashboard-group">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="user-dt">
-                                    <div className="user-img">
-                                        <img src="images/avatar/img-5.jpg" alt />
-                                        <div className="img-add">
-                                            <input type="file" id="file" />
-                                            <label htmlFor="file"><i className="uil uil-camera-plus" /></label>
-                                        </div>
-                                    </div>
-                                    <h4>Johe Doe</h4>
-                                    <p>+91999999999<a href="#"><i className="uil uil-edit" /></a></p>
-                                    <div className="earn-points"><img src="images/Dollar.svg" alt />Points : <span>20</span></div>
-                                </div>
-                            </div>
-                        </div>
+                            {/* <div className="row">
+              <div className="col-lg-12">
+                <div className="user-dt">
+                  <div className="user-img">
+                    <img src="/img/avatar/img-5.jpg" alt />
+                    <div className="img-add">
+                      <input type="file" id="file" />
+                      <label htmlFor="file">
+                        <i className="uil uil-camera-plus" />
+                      </label>
+                    </div>
+                  </div>
+                  <h4>{user.firstName}</h4>
+                  <p>+977 {user.phone}</p>
+                </div>
+              </div>
+            </div> */}
                     </div>
                 </div>
                 <div className>
@@ -53,9 +54,9 @@ export default class Wishlist extends Component {
                                         <a href="/account/view" className="user-item "><i className="uil uil-apps" />Overview</a>
                                         <a href="/account/profile" className="user-item"><i className="mdi mdi-account-outline" />My profile</a>
                                         <a href="/account/order/list" className="user-item"><i className="uil uil-box" />My Orders</a>
-                                        <a href="/account/rewards" className="user-item"><i className="uil uil-gift" />My Rewards</a>
-                                        <a href="/account/wishlist" className="user-item active"><i className="uil uil-heart" />Shopping Wishlist</a>
-                                        <a href="/account/address" className="user-item"><i className="uil uil-location-point" />My Address</a>
+                                        {/* <a href="/account/rewards" className="user-item"><i className="uil uil-gift" />My Rewards</a> */}
+                                        {/* <a href="/account/wishlist" className="user-item active"><i className="uil uil-heart" />Shopping Wishlist</a> */}
+                                        {/* <a href="/account/address" className="user-item"><i className="uil uil-location-point" />My Address</a> */}
                                         <a className="user-item" onClick={this.handleLogout}><i className="uil uil-exit" />Logout</a>
                                     </div>
                                 </div>

@@ -323,18 +323,17 @@ class Checkout extends Component {
                                       </div>
                                     </li>
                                     <li>
-                                      <div
+                                      {/* <div
                                         className="radio-item_1"
                                         onClick={this.handlePaymentSystem}
                                       >
-                                        {/* <input value="card" name="paymentmethod" type="button" onClick={this.handleRadioChange} /> */}
                                         <label
                                           htmlFor="card1"
                                           className="radio-label_1"
                                         >
                                           Pay With Card
                                         </label>
-                                      </div>
+                                      </div> */}
                                     </li>
                                   </ul>
                                 </div>
